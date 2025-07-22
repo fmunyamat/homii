@@ -2,29 +2,27 @@
   "name": "homii",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "npm run dev:web",
+    "dev:web": "cd apps/web && npx next dev",
+    "dev:mobile": "cd apps/mobile && npx expo start",
+    "dev:ios": "cd apps/mobile && npx expo start --ios",
+    "dev:android": "cd apps/mobile && npx expo start --android",
+    "build:web": "cd apps/web && npx next build",
+    "build:ios": "cd apps/mobile && npx expo build:ios",
+    "build:android": "cd apps/mobile && npx expo build:android",
+    "start": "cd apps/web && npx next start",
+    "lint:web": "cd apps/web && npx next lint",
+    "lint:mobile": "cd apps/mobile && npx expo lint"
   },
-  "dependencies": {
-    "antd": "^5.26.6",
-    "maplibre-gl": "^5.6.1",
-    "next": "15.4.2",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "sass": "^1.89.2",
-    "yarn": "^1.22.22"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/maplibre-gl": "^1.14.0",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "eslint": "^9"
   }
 }
