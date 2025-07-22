@@ -1,0 +1,122 @@
+.landingPageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    .pageContentWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: calc(100vh - 4.5rem);
+        color: #191970;
+        text-align: center;
+        padding: 2rem;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        flex-grow: 1;
+        width: 100%;
+        max-width: 900px;
+        box-sizing: border-box;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            max-width: 800px;
+        }
+
+        .tipList {
+            text-align: left;
+            max-width: 700px;
+            margin: 1.5rem auto;
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin: 0.8rem 0;
+                font-size: 1rem;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+
+                .icon {
+                    font-size: 1.2em;
+                    line-height: 1.5;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        p {
+            margin-top: 1.5rem;
+            max-width: 700px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+    .landingPageContainer {
+        .siteHeader {
+            flex-direction: column;
+            padding: 1rem;
+
+            .mainNav {
+                ul {
+                    gap: 1rem;
+                    margin-top: 1rem;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .pageContentWrapper {
+            h1 {
+                font-size: 1.8rem;
+                white-space: normal;
+            }
+
+            .tipList {
+                max-width: 90%;
+                padding: 0 1rem;
+
+                li {
+                    font-size: 0.9rem;
+                }
+            }
+
+            p {
+                font-size: 0.9rem;
+                padding: 0 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .landingPageContainer {
+        .siteHeader {
+            .mainNav {
+                li a {
+                    padding: 0.3rem 0.5rem;
+                }
+
+                .navCta {
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+
+        .pageContentWrapper {
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

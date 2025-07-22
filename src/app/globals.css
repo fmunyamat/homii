@@ -1,14 +1,41 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --font-size: 14px;
+    --background: #ffffff;
+    --foreground: oklch(0.145 0 0); /* Near black */
+    --primary: #030213; /* Very dark blue/black */
+    --primary-foreground: oklch(1 0 0); /* White */
+    --secondary: oklch(0.95 0.0058 264.53); /* Light bluish grey */
+    --secondary-foreground: #030213;
+    --muted: #ececf0; /* Light grey */
+    --muted-foreground: #717182; /* Medium grey */
+    --accent: #e9ebef; /* Very light grey */
+    --accent-foreground: #030213;
+    --destructive: #d4183d; /* Red */
+    --destructive-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --input: transparent;
+    --input-background: #f3f3f5;
+    --switch-background: #cbced4;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --ring: oklch(0.708 0 0); /* Medium grey */
+    --radius: 0.625rem;
+
+    /* Homii Brand Colors - Adjusted to new values */
+    --homii-burnt-orange: #cc5500;
+    --homii-dark-brown: #4a2c2a;
+    --homii-light-peach: #ffeee6;
+    --homii-cream: #fff8f0;
+    --homii-warm-orange: #e67e22;
+    --homii-connection: #f39c12;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -17,9 +44,11 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #030213;
+  background-color: #ffeee6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,6 +62,15 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+
+.nav-cta {
+    background-color: #cc5500; /* Homii burnt-orange */
+    color: white !important; /* Ensure white text */
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.625rem; /* Directly set radius */
+    transition: background-color 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {

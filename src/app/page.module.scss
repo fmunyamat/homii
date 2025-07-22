@@ -1,0 +1,238 @@
+.landingPageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.headerSpacer {
+    height: 4.5rem;
+    width: 100%;
+}
+
+.heroContent {
+    text-align: center;
+    color: #030213;
+    padding: 1.5rem;
+    max-width: 900px;
+    box-sizing: border-box;
+    margin-top: 3rem;
+}
+
+.mainHeading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    color: #030213;
+}
+
+.subHeading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.ctaButton {
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 550;
+    color: white;
+    background-color: #cc5500;
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:hover {
+        background-color: #e67e22;
+        transform: translateY(-2px);
+    }
+}
+
+.contentSection {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+
+    h2 {
+        font-size: 2.8rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        color: #cc5500;
+    }
+}
+
+.problemStatement,
+.solutionIntro {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #030213;
+}
+
+.features {
+    background-color: #fff8f0;
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featureCard {
+    background-color: #ffeee6;
+    padding: 2rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 0.6rem;
+        color: #030213;
+    }
+
+    p {
+        font-size: 0.95rem;
+        color: #717182;
+    }
+}
+
+.featureIcon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #cc5500;
+}
+
+.launchCities {
+    font-style: italic;
+    margin-top: 1.5rem;
+    color: #717182;
+}
+
+@media (max-width: 1024px) {
+    .featureGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .headerSpacer {
+        height: 7rem;
+    }
+
+    .siteLogoWrapper {
+        margin-bottom: 0.5rem;
+    }
+
+    .mainHeading {
+        font-size: 2.5rem;
+        white-space: normal;
+    }
+
+    .subHeading {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    .ctaButton {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .contentSection {
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .problemStatement,
+    .solutionIntro {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .featureGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        padding: 2.5rem 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .featureCard {
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .featureIcon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainHeading {
+        font-size: 2rem;
+    }
+
+    .subHeading {
+        font-size: 0.9rem;
+    }
+
+    .heroContent {
+        padding: 1rem;
+    }
+}
