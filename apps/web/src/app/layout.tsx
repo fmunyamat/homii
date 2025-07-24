@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Nav navLinks={navLinks()}/>
+        {/* <Nav navLinks={navLinks()}/> */}
         {children}
       </body>
     </html>
