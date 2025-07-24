@@ -10,8 +10,7 @@ import {
   Dimensions,
   Platform, // For platform-specific adjustments
 } from 'react-native';
-// import LinearGradient from 'react-native-linear-gradient'; // For gradient backgrounds
-// import { Heart, MessageCircle, Share, MapPin, Camera, Plus } from 'lucide-react-native'; // React Native version of Lucide icons
+
 import { Ionicons } from '@expo/vector-icons';
 
 const { width } = Dimensions.get('window');
@@ -157,7 +156,6 @@ const PolaroidFeed = () => {
 
               {/* Location */}
               <View style={styles.location}>
-                {/* <MapPin size={12} color="#f87171" /> */}
                 <Ionicons name="map-outline" size={14} color="red" />
                 <Text style={styles.locationText}>{post.location}</Text>
               </View>
@@ -172,11 +170,6 @@ const PolaroidFeed = () => {
                     onPress={() => toggleLike(post.id)}
                     style={styles.actionButton}
                   >
-                    {/* <Heart
-                      size={20}
-                      color={likedPosts.has(post.id) ? '#ef4444' : '#9ca3af'}
-                      fill={likedPosts.has(post.id) ? '#ef4444' : 'none'}
-                    /> */}
 
                     <Ionicons
                         name={likedPosts.has(post.id) ? "heart" : "heart-outline"}
@@ -189,14 +182,12 @@ const PolaroidFeed = () => {
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.actionButton}>
-                    {/* <MessageCircle size={20} color="#9ca3af" /> */}
                     <Ionicons name="chatbubble-outline" size={20} color="#9ca3af" />
                     <Text style={styles.actionText}>{post.comments}</Text>
                   </TouchableOpacity>
                 </View>
 
                 <TouchableOpacity style={styles.actionButton}>
-                  {/* <Share size={20} color="#9ca3af" /> */}
                     <Ionicons name="share-outline" size={20} color="#9ca3af" />
                 </TouchableOpacity>
               </View>
@@ -246,32 +237,24 @@ const PolaroidFeed = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff7ed', // Corresponds to bg-orange-50
+    backgroundColor: '#fff7ed'
   },
   header: {
     // marginTop: 40,
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#fed7aa', // border-orange-200
+    borderBottomColor: '#fed7aa',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(255,255,255,0.9)', // bg-white/90
-    // No direct equivalent for backdrop-blur-md in core React Native without external libraries.
-    // For iOS, you could use BlurView from '@react-native-community/blur'
-    // For Android, blurring effects are more complex and might require native module development or specific libraries.
-    // position: 'absolute',
-    // top: 0,
-    // left: 0,
-    // right: 0,
-    // zIndex: 10,
-    paddingTop: Platform.OS === 'android' ? 20 : 0, // Adjust for Android status bar
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    paddingTop: Platform.OS === 'android' ? 20 : 0
   },
   headerLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12, // space-x-3
+    gap: 12
   },
   headerIconBg: {
     width: 32,
@@ -281,21 +264,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   headerTitleGradient: {
-    // This creates the text gradient effect by using a LinearGradient component
-    // and positioning the text absolute over it, then masking.
-    // However, direct text gradient is not straightforward in React Native.
-    // For simplicity, we'll use a solid color that approximates the gradient effect.
-    // A true text gradient would require SVG or other complex solutions.
-    // Keeping it as a LinearGradient wrapper for consistency, but the text color will be solid.
-    // Or you can explore libraries like 'react-native-linear-gradient-text'
-    height: 24, // Approximate height for text
+    height: 24,
     justifyContent: 'center',
   },
   headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#c05621', // Approximating orange-600
-    // No direct equivalent for bg-clip-text text-transparent without native modules or SVG
+    color: '#c05621'
   },
   plusButton: {
     width: 40,
@@ -305,7 +280,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 5,
-    elevation: 8, // For Android shadow
+    elevation: 8
   },
   plusButtonGradient: {
     width: '100%',
@@ -316,13 +291,12 @@ const styles = StyleSheet.create({
   },
   feedContentContainer: {
     paddingHorizontal: 16,
-    paddingVertical: 100, // Adjusted padding to account for fixed header
-    gap: 32, // space-y-8
+    paddingVertical: 100,
+    gap: 32
   },
   postContainer: {
-    maxWidth: width - 32, // max-w-sm adjusted for padding
-    alignSelf: 'center', // mx-auto
-    // transform applied inline
+    maxWidth: width - 32,
+    alignSelf: 'center',
   },
   polaroidFrame: {
     backgroundColor: 'white',
@@ -332,8 +306,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.3,
     shadowRadius: 15,
-    elevation: 20, // For Android shadow
-    borderRadius: 2, // rounded-sm
+    elevation: 20,
+    borderRadius: 2,
     position: 'relative',
   },
   tape1: {
@@ -342,7 +316,7 @@ const styles = StyleSheet.create({
     left: 32,
     width: 64,
     height: 24,
-    backgroundColor: 'rgba(253,224,71,0.7)', // yellow-200/70
+    backgroundColor: 'rgba(253,224,71,0.7)',
     transform: [{ rotate: '12deg' }],
     borderRadius: 2,
     shadowColor: '#000',
@@ -350,7 +324,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 1,
     borderWidth: 1,
-    borderColor: 'rgba(253,224,71,0.5)', // yellow-300/50
+    borderColor: 'rgba(253,224,71,0.5)',
     zIndex: 1,
   },
   tape2: {
@@ -359,7 +333,7 @@ const styles = StyleSheet.create({
     right: 48,
     width: 48,
     height: 16,
-    backgroundColor: 'rgba(253,224,71,0.7)', // yellow-200/70
+    backgroundColor: 'rgba(253,224,71,0.7)',
     transform: [{ rotate: '-6deg' }],
     borderRadius: 2,
     shadowColor: '#000',
@@ -367,14 +341,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 1,
     borderWidth: 1,
-    borderColor: 'rgba(253,224,71,0.5)', // yellow-300/50
+    borderColor: 'rgba(253,224,71,0.5)',
     zIndex: 1,
   },
   userInfo: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 12, // mb-3
-    gap: 12, // space-x-3
+    marginBottom: 12,
+    gap: 12
   },
   avatarBg: {
     width: 40,
@@ -391,27 +365,27 @@ const styles = StyleSheet.create({
   },
   userName: {
     fontWeight: '600',
-    color: '#1f2937', // gray-800
+    color: '#1f2937',
     fontSize: 14,
   },
   userHandle: {
-    color: '#6b7280', // gray-500
+    color: '#6b7280',
     fontSize: 12,
   },
   timeAgo: {
     fontSize: 12,
-    color: '#9ca3af', // gray-400
+    color: '#9ca3af',
   },
   imageWrapper: {
-    marginBottom: 16, // mb-4
-    backgroundColor: '#f3f4f6', // gray-100
-    borderRadius: 2, // rounded-sm
+    marginBottom: 16,
+    backgroundColor: '#f3f4f6',
+    borderRadius: 2,
     overflow: 'hidden',
     position: 'relative',
   },
   postImage: {
     width: '100%',
-    height: 256, // h-64
+    height: 256,
     resizeMode: 'cover',
   },
   vintageOverlay: {
@@ -420,75 +394,72 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    // The web gradient was from-amber-100/20 via-transparent to-blue-100/10
-    // This is a direct translation but might need tweaking for visual match
   },
   location: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4, // space-x-1
-    marginBottom: 12, // mb-3
+    gap: 4,
+    marginBottom: 12
   },
   locationText: {
     fontSize: 12,
-    color: '#4b5563', // gray-600
+    color: '#4b5563',
     fontWeight: '500',
   },
   caption: {
-    fontSize: 16, // text-base
-    color: '#374151', // gray-700
-    marginBottom: 16, // mb-4
-    lineHeight: 24, // leading-relaxed
-    fontFamily: Platform.OS === 'ios' ? 'Caveat-Regular' : 'CaveatRegular', // You'll need to link this font
+    fontSize: 16,
+    color: '#374151',
+    marginBottom: 16,
+    lineHeight: 24,
+    fontFamily: Platform.OS === 'ios' ? 'Caveat-Regular' : 'CaveatRegular',
   },
   actions: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 8, // pt-2
+    paddingTop: 8,
     borderTopWidth: 1,
-    borderTopColor: '#f3f4f6', // border-gray-100
+    borderTopColor: '#f3f4f6'
   },
   actionGroup: {
     flexDirection: 'row',
-    gap: 16, // space-x-4
+    gap: 16
   },
   actionButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8, // space-x-2
+    gap: 8
   },
   actionText: {
     fontSize: 14,
-    color: '#4b5563', // gray-600
+    color: '#4b5563'
   },
   bottomTabBar: {
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'rgba(255,255,255,0.95)', // bg-white/95
+    backgroundColor: 'rgba(255,255,255,0.95)',
     borderTopWidth: 1,
-    borderTopColor: '#fed7aa', // border-orange-200
+    borderTopColor: '#fed7aa',
     paddingHorizontal: 16,
-    paddingVertical: 12,
-    // No direct equivalent for backdrop-blur-md
+    paddingVertical: 12
   },
   tabBarInner: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    maxWidth: 400, // max-w-md
-    alignSelf: 'center', // mx-auto
+    maxWidth: 400,
+    alignSelf: 'center'
   },
   tabBarActiveButton: {
-    padding: 8, // p-2
-    borderRadius: 8, // rounded-lg
+    padding: 8,
+    borderRadius: 8,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 5,
-    elevation: 8, // For Android shadow
+    elevation: 8,
   },
   tabBarIconGradient: {
     width: '100%',
@@ -498,8 +469,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   tabBarButton: {
-    padding: 8, // p-2
-    // hover effects handled differently, typically with TouchableOpacity's `activeOpacity` or state.
+    padding: 8
   },
 });
 
