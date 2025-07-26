@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap");
 
 .container {
-    display: flex;
+  display: flex;
   min-height: 100vh;
-  background: #8B4513; // Cork board brown color
+  background: #8b4513; // Cork board brown color
   position: relative;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -79,7 +79,7 @@
 }
 
 .tackBoard {
-//   position: relative;
+  //   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 80px 20px 100px;
@@ -87,87 +87,73 @@
   background-color: #fff8ec;
 }
 
-.boardTexture {
-//   position: absolute;
-//   inset: 0;
-//   background-image: 
-//     radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-//     radial-gradient(circle at 40% 20%, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-//     radial-gradient(circle at 90% 40%, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-//     radial-gradient(circle at 60% 80%, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-//   background-size: 200px 200px, 300px 300px, 250px 250px, 350px 350px;
-//   opacity: 0.3;
-//   pointer-events: none;
-}
-
 .polaroidContainer {
-    // position: relative;
-    display: grid;
-    grid-template-columns: 0.2fr 0.2fr 0.2fr;
-    // grid-template-rows: repeat(auto, 2fr);
-    gap: 50px;
-    width: 100vw;
-    margin-left: 24%;
+  // position: relative;
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr 0.2fr;
+  // grid-template-rows: repeat(auto, 2fr);
+  gap: 50px;
+  width: 100vw;
+  margin-left: 24%;
 
-    .polaroidWrapper {
-        cursor: pointer;
-        transition: all 0.3s ease;
-        width: 250px;
-        // margin-left: 80px;
-        // margin-top: 40px;
-        // margin: 40px 150px 0 350px;
+  .polaroidWrapper {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 250px;
+    // margin-left: 80px;
+    // margin-top: 40px;
+    // margin: 40px 150px 0 350px;
 
-        &:hover {
-            transform: scale(1.05) !important;
-            z-index: 999 !important;
-            
-            .polaroid {
-            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
-            }
-        }
+    &:hover {
+      transform: scale(1.05) !important;
+      z-index: 999 !important;
+
+      .polaroid {
+        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+      }
     }
+  }
 
-    .polaroid {
-        background: white;
-        padding: 16px;
-        //   margin: auto 90px;
-        padding-bottom: 24px;
-        box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
-        border-radius: 2px;
-        width: 400px;
-        position: relative;
-        transition: box-shadow 0.3s ease;
+  .polaroid {
+    background: white;
+    padding: 16px;
+    //   margin: auto 90px;
+    padding-bottom: 24px;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    width: 400px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .pushPin {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, #ff6b6b 30%, #cc5252 70%);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+      inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    z-index: 10;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      background: #ff4757;
+      border-radius: 50%;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
     }
+  }
 
-    .pushPin {
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 16px;
-        height: 16px;
-        background: radial-gradient(circle, #ff6b6b 30%, #cc5252 70%);
-        border-radius: 50%;
-        box-shadow: 
-            0 2px 4px rgba(0, 0, 0, 0.3),
-            inset 0 1px 2px rgba(255, 255, 255, 0.3);
-        z-index: 10;
-        
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 6px;
-            height: 6px;
-            background: #ff4757;
-            border-radius: 50%;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-        }
-    }
-
-    .tape {
+  .tape {
     position: absolute;
     background: rgba(254, 240, 138, 0.7);
     border: 1px solid rgba(252, 211, 77, 0.5);
@@ -175,63 +161,63 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
     &.tapeLeft {
-        width: 64px;
-        height: 24px;
-        top: -8px;
-        left: 32px;
-        transform: rotate(12deg);
+      width: 64px;
+      height: 24px;
+      top: -8px;
+      left: 32px;
+      transform: rotate(12deg);
     }
 
     &.tapeRight {
-        width: 48px;
-        height: 16px;
-        top: -4px;
-        right: 48px;
-        transform: rotate(-6deg);
+      width: 48px;
+      height: 16px;
+      top: -4px;
+      right: 48px;
+      transform: rotate(-6deg);
     }
-    }
+  }
 
-    .userInfo {
+  .userInfo {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
 
     .avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: linear-gradient(45deg, #fdba74, #f9a8d4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #fdba74, #f9a8d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
     }
 
     .userDetails {
-        flex: 1;
+      flex: 1;
 
-        .userName {
+      .userName {
         font-weight: 600;
         color: #374151;
         font-size: 14px;
         margin: 0 0 2px 0;
-        }
+      }
 
-        .userHandle {
+      .userHandle {
         color: #6b7280;
         font-size: 12px;
         margin: 0;
-        }
+      }
     }
 
     .timeAgo {
-        font-size: 12px;
-        color: #9ca3af;
+      font-size: 12px;
+      color: #9ca3af;
     }
-    }
+  }
 
-    .imageContainer {
+  .imageContainer {
     position: relative;
     margin-bottom: 16px;
     background: #f3f4f6;
@@ -239,26 +225,26 @@
     overflow: hidden;
 
     .postImage {
-        width: 100%;
-        height: 256px;
-        object-fit: cover;
-        display: block;
+      width: 100%;
+      height: 256px;
+      object-fit: cover;
+      display: block;
     }
 
     .vintageOverlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
         180deg,
         rgba(219, 234, 254, 0.1) 0%,
         transparent 50%,
         rgba(251, 191, 36, 0.2) 100%
-        );
-        pointer-events: none;
+      );
+      pointer-events: none;
     }
-    }
+  }
 
-    .location {
+  .location {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -268,23 +254,23 @@
     font-weight: 500;
 
     svg {
-        flex-shrink: 0;
+      flex-shrink: 0;
     }
 
     span {
-        color: #4b5563;
+      color: #4b5563;
     }
-    }
+  }
 
-    .caption {
+  .caption {
     font-size: 14px;
     color: #374151;
     line-height: 1.5;
     margin: 0 0 16px 0;
     //   font-family: 'Caveat';
-    }
+  }
 
-    .actions {
+  .actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -292,46 +278,46 @@
     border-top: 1px solid #f3f4f6;
 
     .actionButtons {
-        display: flex;
-        align-items: center;
-        gap: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
 
     .actionButton {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background: none;
-        border: none;
-        color: #9ca3af;
-        font-size: 14px;
-        cursor: pointer;
-        transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      color: #9ca3af;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
 
-        &:hover {
+      &:hover {
         color: #6b7280;
         transform: scale(1.1);
-        }
+      }
 
-        &.liked {
+      &.liked {
         color: #ef4444;
         transform: scale(1.1);
-        }
+      }
     }
 
     .shareButton {
-        background: none;
-        border: none;
-        color: #9ca3af;
-        cursor: pointer;
-        transition: all 0.2s ease;
+      background: none;
+      border: none;
+      color: #9ca3af;
+      cursor: pointer;
+      transition: all 0.2s ease;
 
-        &:hover {
+      &:hover {
         color: #10b981;
         transform: scale(1.1);
-        }
+      }
     }
-    }
+  }
 }
 
 .tabBar {
@@ -363,7 +349,7 @@
     border-radius: 8px;
 
     &:hover {
-      color: #FFF8DC; // Full cream color
+      color: #fff8dc; // Full cream color
       transform: scale(1.1);
     }
 
@@ -384,21 +370,20 @@
   .tackBoard {
     padding: 60px 10px 100px;
   }
-  
+
   .polaroidWrapper {
     width: 220px;
   }
-  
+
   .polaroid {
     padding: 12px;
     padding-bottom: 20px;
   }
-  
+
   .imageContainer .postImage {
     height: 200px;
   }
 }
-
 
 // SINGLE COLUMN FEED SCSS
 
