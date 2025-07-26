@@ -1204,11 +1204,12 @@
     find-up "^5.0.0"
     js-yaml "^4.1.0"
 
-"@homii/web@file:/Users/farai/Projects/homii/apps/web":
+"@homii/web@file:/Users/Homii/homii/apps/web":
   version "0.1.0"
   resolved "file:apps/web"
   dependencies:
     antd "^5.26.6"
+    lucide-react "^0.525.0"
     maplibre-gl "^5.6.1"
     next "15.4.2"
     react "19.1.0"
@@ -2141,7 +2142,7 @@
   resolved "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.8.10.tgz"
   integrity sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==
 
-"@your-project/shared@file:/Users/farai/Projects/homii/packages/shared":
+"@your-project/shared@file:/Users/Homii/homii/packages/shared":
   version "1.0.0"
   resolved "file:packages/shared"
   dependencies:
@@ -5201,7 +5202,7 @@ mkdirp@^3.0.1:
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-3.0.1.tgz"
   integrity sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==
 
-"mobile@file:/Users/farai/Projects/homii/apps/mobile":
+"mobile@file:/Users/Homii/homii/apps/mobile":
   version "1.0.0"
   resolved "file:apps/mobile"
   dependencies:
