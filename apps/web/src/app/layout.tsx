@@ -8,22 +8,9 @@ const navLinks = () => {
     return (
         [
             {
-                label: 'Before You Go',
+                label: 'Destinations',
                 path: `${pathBase}/before-you-go`
             },
-            {
-                label: 'Essentials',
-                path: `${pathBase}/essentials`
-            },
-            {
-                label: 'Safety Tips',
-                path: `${pathBase}/safety-tips`
-            },
-            {
-                label: 'Join the Waitlist',
-                path: `${pathBase}/join-the-waitlist`,
-                className: 'nav-cta'
-            }
         ]
     )
 }
@@ -41,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <Nav navLinks={navLinks()}/> */}
+        <Nav navLinks={navLinks()}/>
         {children}
       </body>
     </html>

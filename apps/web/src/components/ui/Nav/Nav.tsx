@@ -13,6 +13,7 @@ interface NavProps {
 }
 
 const Nav = ({ navLinks }: NavProps) => {
+    
     return (
         <header className={styles.siteHeader}>
             <div className={styles.headerLeft}>
@@ -24,7 +25,7 @@ const Nav = ({ navLinks }: NavProps) => {
                 <ul>
                     {navLinks.map((link, index) => (
                         <li key={index}>
-                            <a href={link.path} className={link.className}>{link.label}</a>
+                            <a href={link.path} className={styles.linkLabel}>{link.label}</a>
                         </li>
                     ))}
                 </ul>

@@ -48,7 +48,7 @@ body {
   line-height: 1.6;
   font-size: 14px;
   color: #030213;
-  background-color: #ffeee6;
+  /* background-color: #ffeee6; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

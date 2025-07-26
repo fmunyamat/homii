@@ -1,0 +1,25 @@
+.destinationsContainer {
+    .filterSection {
+        padding: 1rem 7rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    :global(.MuiOutlinedInput-root) {
+        border-radius: 30px;
+    }
+
+    .pageHeader {
+        padding: 2rem 7rem;
+        display: flex;
+        flex-direction: column;
+
+        .pageTitle {
+            font-size: 2.5rem;
+        }
+
+        .pageDesc {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
