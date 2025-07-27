@@ -72,8 +72,8 @@ a {
   transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */

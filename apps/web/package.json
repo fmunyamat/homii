@@ -9,6 +9,10 @@
     "lint": "npx next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
     "antd": "^5.26.6",
     "lucide-react": "^0.525.0",
     "maplibre-gl": "^5.6.1",

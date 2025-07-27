@@ -1,0 +1,26 @@
+.filterBarContainer {
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr;
+    align-items: center;
+    gap: 15px;
+    // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .filterPillContainer {
+        display: flex;
+        gap: 15px;
+        
+        .allFilterPill, .filterPill {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f2f4f6;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .allFilterPill {
+            background-color: white;
+            border: 1px solid #c9c9c9;
+        }
+    }
+}
