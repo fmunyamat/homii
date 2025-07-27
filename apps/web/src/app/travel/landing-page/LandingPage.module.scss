@@ -1,0 +1,407 @@
+// --- Variables ---
+$color-dark-bg: #262a3e;
+$color-dark-text: #111827;
+$color-light-text: #f9fafb;
+$color-gray-text: #4b5563;
+$color-light-gray-bg: #f9fafb;
+$color-border: #e5e7eb;
+$color-tag-bg: #f3f4f6;
+
+// --- Base Container ---
+.container {
+  background-color: #ffffff;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+// --- General Elements ---
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &.buttonPrimary {
+    background-color: $color-light-text;
+    color: $color-dark-text;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  &.buttonSecondary {
+    background-color: transparent;
+    color: $color-light-text;
+    border-color: $color-light-text;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &.buttonDark {
+    background-color: $color-dark-text;
+    color: $color-light-text;
+    border-color: $color-dark-text;
+
+    svg path {
+      stroke: $color-light-text;
+    }
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}
+
+.tag {
+  background-color: $color-tag-bg;
+  color: $color-gray-text;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  border: 1px solid $color-border;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+// --- Header ---
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 80px;
+  background-color: #fff;
+  border-bottom: 1px solid $color-border;
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-dark-text;
+  }
+  .nav {
+    display: flex;
+    gap: 32px;
+    a {
+      text-decoration: none;
+      color: $color-gray-text;
+      font-weight: 500;
+      &:hover {
+        color: $color-dark-text;
+      }
+    }
+  }
+  .authButtons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .signIn {
+      color: $color-gray-text;
+      font-weight: 500;
+      text-decoration: none;
+      &:hover {
+        color: $color-dark-text;
+      }
+    }
+    .joinNow {
+      background-color: $color-dark-text;
+      color: $color-light-text;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+// --- Hero Section ---
+.hero {
+  background-color: $color-dark-bg;
+  color: $color-light-text;
+  text-align: center;
+  padding: 120px 40px;
+
+  h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    color: #d1d5db;
+  }
+  .heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+// --- Try It Out Section ---
+.tryItOut {
+  background-color: $color-light-gray-bg;
+  padding: 80px;
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-dark-text;
+    margin-bottom: 40px;
+  }
+  .filterBox {
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid $color-border;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+
+    .searchInput {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid $color-border;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .filterGroup {
+      margin-bottom: 24px;
+    }
+
+    .filterTitle {
+      font-weight: 600;
+      color: $color-dark-text;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .buttonDark {
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+}
+
+// --- Stories Section ---
+.stories {
+  padding: 80px;
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .storiesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .storyCard {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid $color-border;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  .storyImage {
+    height: 200px;
+    background-color: $color-dark-bg;
+    color: $color-light-text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .storyContent {
+    padding: 24px;
+  }
+  .storyAuthor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .authorName {
+    font-weight: 600;
+  }
+  .authorLocation {
+    font-size: 14px;
+    color: $color-gray-text;
+  }
+  .storyCard h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .storyCard .tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .storyDescription {
+    color: $color-gray-text;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .readMore {
+    font-weight: 600;
+    color: $color-dark-text;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// --- How It Works Section ---
+.howItWorks {
+  background-color: $color-light-gray-bg;
+  padding: 80px;
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+  }
+  .step {
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 16px 0 8px 0;
+    }
+    p {
+      color: $color-gray-text;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// --- Testimonials Section ---
+.testimonials {
+  padding: 80px;
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .testimonialCard {
+    background: $color-light-gray-bg;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .quote {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .testimonialAuthor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .authorName {
+    font-weight: 600;
+  }
+  .authorDetails {
+    font-size: 14px;
+    color: $color-gray-text;
+  }
+}
+
+// --- Footer ---
+.footer {
+  background-color: $color-dark-bg;
+  color: #e5e7eb;
+  padding: 60px 80px 20px 80px;
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #4b5563;
+    padding-bottom: 40px;
+  }
+  .footerBrand {
+    max-width: 250px;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+  }
+  .footerLinks {
+    display: flex;
+    gap: 80px;
+    h4 {
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    a {
+      display: block;
+      color: #d1d5db;
+      text-decoration: none;
+      margin-bottom: 12px;
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+    }
+  }
+  .socialIcons {
+    display: flex;
+    gap: 16px;
+  }
+  .footerCopyright {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+}
