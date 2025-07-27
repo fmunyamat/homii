@@ -1,5 +1,5 @@
 'use client'
-
+import React from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import { TextField } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -7,7 +7,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
 import styles from './FilterBar.module.scss';
 
-interface Destination {
+interface DestinationFilter {
     id: number,
     label: string
 }
@@ -17,17 +17,17 @@ interface FilterPills {
 }
 
 interface Props {
-    destinationObj: Destination[],
-    filterPillObj: FilterPills[]
+    destinationArray: DestinationFilter[],
+    filterPillArray: FilterPills[]
 }
 
-const FilterBar = ({ destinationObj, filterPillObj }: Props ) => {
+const FilterBar = ({ destinationArray, filterPillArray }: Props ) => {
     return (
         <div className={styles.filterBarContainer}>
             <div className={styles.searchBarContainer}>
                 <Autocomplete
                     disablePortal
-                    options={destinationObj}
+                    options={destinationArray}
                     sx={{ width: 300 }}
                     renderInput={(params) => <TextField {...params} label="Search Destinations" />}
                 />
@@ -39,13 +39,13 @@ const FilterBar = ({ destinationObj, filterPillObj }: Props ) => {
                     <KeyboardArrowDownIcon style={{color: '#31383f'}} />
                 </div>
                 {
-                    filterPillObj.map((pill, index) => (
-                        <>
-                            <div className={styles.filterPill} key={index}>
+                    filterPillArray.map((pill, index) => (
+                        <React.Fragment key={index}>
+                            <div className={styles.filterPill}>
                                 <span>{pill.label}</span>
                                 <KeyboardArrowDownIcon />
                             </div>
-                        </>
+                        </React.Fragment>
                     ))
                 }
             </div>

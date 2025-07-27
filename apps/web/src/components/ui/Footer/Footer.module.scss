@@ -1,0 +1,153 @@
+.footer {
+    width: 100%;
+    background-color: #1f2938;
+    color: #ffffff;
+    z-index: 1000;
+    padding: 16px 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+
+    &Logo {
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        margin-bottom: 16px !important;
+    }
+
+    &Description {
+        color: #bdc3c7 !important;
+        line-height: 1.6;
+        margin-bottom: 24px !important;
+    }
+
+    &Heading {
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        margin-bottom: 16px !important;
+        font-size: 16px !important;
+    }
+
+    &Links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &Link {
+        color: #bdc3c7 !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+
+        &:hover {
+            color: #ffffff !important;
+        }
+    }
+
+    .socialLinks {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+
+        .socialIcon {
+            color: #bdc3c7 !important;
+
+            &:hover {
+                color: #ffffff !important;
+            }
+        }
+    }
+
+    .newsletterText {
+        color: #ffffff !important;
+        margin-bottom: 12px !important;
+        font-weight: 500 !important;
+    }
+
+    .newsletterForm {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 16px;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+    .emailInput {
+        flex: 1;
+
+        .MuiOutlinedInput-root {
+            background-color: #34495e;
+            color: #ffffff;
+
+            .MuiOutlinedInput-notchedOutline {
+                border-color: #4a6741;
+            }
+
+            &:hover .MuiOutlinedInput-notchedOutline {
+                border-color: #5a7a51;
+            }
+
+            &.Mui-focused .MuiOutlinedInput-notchedOutline {
+                border-color: #ffffff;
+            }
+        }
+
+        .MuiInputBase-input::placeholder {
+            color: #95a5a6;
+            opacity: 1;
+        }
+    }
+
+    .subscribeButton {
+        background-color: #3498db !important;
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        text-transform: none !important;
+
+        &:hover {
+            background-color: #2980b9 !important;
+        }
+    }
+
+    &Divider {
+        background-color: #34495e !important;
+        margin: 32px 0 24px !important;
+    }
+
+    &Bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        @media (max-width: 960px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .copyright {
+            color: #95a5a6 !important;
+            font-size: 14px !important;
+        }
+
+        &Links {
+            display: flex;
+            gap: 24px;
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .footerBottomLink {
+                color: #95a5a6 !important;
+                text-decoration: none !important;
+                font-size: 14px !important;
+
+                &:hover {
+                    color: #ffffff !important;
+                }
+            }
+        }
+    }
+}

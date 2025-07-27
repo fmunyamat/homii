@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Nav from "@/components/ui/Nav/Nav";
+import Footer from "@/components/ui/Footer/Footer";
 import "./globals.css";
 
 const navLinks = () => {
@@ -9,8 +10,14 @@ const navLinks = () => {
         [
             {
                 label: 'Destinations',
-                path: `${pathBase}/before-you-go`
+                path: `${pathBase}/destinations`
             },
+            {
+                label: 'Communities'
+            },
+            {
+                label: 'Resources'
+            }
         ]
     )
 }
@@ -30,6 +37,7 @@ export default function RootLayout({
       <body>
         <Nav navLinks={navLinks()}/>
         {children}
+        <Footer />
       </body>
     </html>
   );

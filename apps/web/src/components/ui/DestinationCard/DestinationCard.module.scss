@@ -1,0 +1,51 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    border: 1px solid rgba(99, 99, 99, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+
+    .cardImage {
+        height: 253px;
+        // background-color: blue;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+    .cardInfo {
+        height: 127px;
+        .cityInfo {
+            margin: 1rem 0 0 1rem;
+
+            .cityName {
+                font-size: 1.2rem;
+            }
+        }
+
+        .membersInfo {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0 0 1rem;
+            gap: 10px;
+
+            .memberCount {
+                color: #9ca1b0;
+            }
+        }
+        
+        .ratingInfo {
+            display: flex;
+            gap: 10px;
+            margin: 0.5rem 0 0 1rem;
+
+            .ratingText {
+                color: #9ca1b0;
+            }
+        }
+    }
+}
